@@ -11,6 +11,12 @@ import { ProfileComponent } from './Components/profile/profile.component';
 import { ViewComponent } from './Components/view/view.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateComponent } from './Components/update/update.component';
+import { RommnavbarComponent } from './Components/rommnavbar/rommnavbar.component';
+import { RoomDashboardComponent } from './Components/room-dashboard/room-dashboard.component';
+import { AddRoomComponent } from './Components/add-room/add-room.component';
+import { ViewRoomComponent } from './Components/view-room/view-room.component';
+import { EditRoomComponent } from './Components/edit-room/edit-room.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,9 +25,13 @@ import { UpdateComponent } from './Components/update/update.component';
     NavBarComponent,
     ProfileComponent,
     ViewComponent,
-    UpdateComponent
-
-    
+    UpdateComponent,
+    RommnavbarComponent,
+    RoomDashboardComponent,
+    AddRoomComponent,
+    ViewRoomComponent,
+    EditRoomComponent
+      
   ],
   imports: [
     BrowserModule,

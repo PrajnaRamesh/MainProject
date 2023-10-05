@@ -1,0 +1,17 @@
+<!-- <p>edit-emp works!</p> -->
+<div class="card">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+               Room Id: <input text="text" class="form-control my-4" [value]="updateRoom.roomId" />
+                Room Name:<input text="text" class="form-control my-4" [(ngModel)]="updateRoom.roomName" />
+                Room Capacity:<input text="number" class="form-control my-4" [(ngModel)]="updateRoom.roomCapacity" />
+                Room Location<input text="text" class="form-control my-4" [(ngModel)]="updateRoom.roomLocation" />
+                <button (click)="onSubmit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

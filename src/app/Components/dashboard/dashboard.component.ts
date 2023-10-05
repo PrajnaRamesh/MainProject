@@ -26,7 +26,6 @@ export class DashboardComponent implements OnInit{
   }
   
   onDelete(id : number) {
-    debugger;
     this.myService.deleteMeeting(id).subscribe((emp)=> {
       alert(id);
       this.router.navigate(["/"]);

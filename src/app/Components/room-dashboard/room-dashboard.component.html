@@ -1,4 +1,5 @@
-<h3 style="text-align: center; padding-top: 10px;">Your Meetings</h3>
+<h3 style="text-align: center; padding-top: 10px;">All Rooms</h3>
+<a routerLink="/addRoom">Add Room</a>
 <br>
 
 <div class="container">
@@ -7,24 +8,22 @@
             <table class="table">
                 <thead>
                     <tr class="table-info">
-                        <th scope="col">Meeting Id</th>
-                        <th scope="col">Meeting Details</th>
+                        <th scope="col">Room Id</th>
+                        <th scope="col">Room Name</th>
                         <th scope="col"></th>
-
-
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let meeting of Meetinglist">
-                        <td scope="row">{{meeting.meetingId}}</td>
-                        <td>{{meeting.meetingDetails}}</td>
-                        <td><a routerLink="/update/{{meeting.meetingId}}" class="btn btn-primary my-2">
+                    <tr *ngFor="let room of RoomList">
+                        <td scope="row">{{room.roomId}}</td>
+                        <td>{{room. roomName}}</td>
+                        <td><a routerLink="/updateRoom/{{room.roomId}}" class="btn btn-primary my-2">
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                         </a>&nbsp;
-                            <button class="btn btn-danger my-2" (click)="onDelete(meeting.meetingId)">
+                            <button class="btn btn-danger my-2" (click)="onDelete(room.roomId)">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </button>&nbsp;
-                            <a routerLink="/view/{{meeting.meetingId}}" class="btn btn-secondary my-2">
+                            <a routerLink="/ViewRoom/{{room.roomId}}" class="btn btn-secondary my-2">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </a>
                         </td>
