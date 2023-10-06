@@ -1,0 +1,16 @@
+<div class="container">
+    {{newMeeting | json}}
+    <div class="row">
+        <h2 class="h2 m-2 p-3">Adding New Meeting</h2>
+    </div>
+    <div class="row">
+                <input text="text" class="form-control my-4" [(ngModel)]="newMeeting.meetingDetails" />
+                <input text="text" class="form-control my-4"  [(ngModel)]="newMeeting.startDate" />
+                <input text="number" class="form-control my-4"  [(ngModel)]="newMeeting.endDate" />
+                <input text="number" class="form-control my-4" [(ngModel)]="newMeeting.startTime" />
+                <input text="number" class="form-control my-4"  [(ngModel)]="newMeeting.endTime" />
+                <input text="number" class="form-control my-4"  [(ngModel)]="newMeeting.employeeId" />
+                <input text="number" class="form-control my-4"  [(ngModel)]="newMeeting.roomId" />
+                <button (click)="onNewMeet()">Add</button>
+    </div>
+    

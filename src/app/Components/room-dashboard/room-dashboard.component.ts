@@ -24,7 +24,6 @@ export class RoomDashboardComponent {
     })  
    
   }
-  
   onDelete(id : number) {
     this.roomService.deleteRoom(id).subscribe((room)=> {
       alert(id);

@@ -1,0 +1,18 @@
+<!-- <p>edit-emp works!</p> -->
+<div class="card">
+    <div class="card-header">
+        
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <input text="text" class="form-control my-4"  disabled [value]="updatedEmployee.employeeId" />
+                <input text="text" class="form-control my-4" [(ngModel)]="updatedEmployee.employeeName" />
+                <input text="email" class="form-control my-4"  [(ngModel)]="updatedEmployee.employeeEmail" />
+                <input text="text" class="form-control my-4"  [(ngModel)]="updatedEmployee.employeePassword" />
+                <input text="number" class="form-control my-4" [(ngModel)]="updatedEmployee.employeePhone" />
+                           <button (click)="onSubmit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

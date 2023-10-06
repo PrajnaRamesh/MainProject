@@ -17,6 +17,9 @@ export class MeetingServiceService {
     let tempUrl=this.baseUrl+"/"+id;
     return this.http.get<Meeting>(tempUrl);
   }
+  public addMeeting(meet:Meeting):Observable<Meeting>{
+    return this.http.post<Meeting>(this.baseUrl, meet);
+  }
   public updateMeeting(meet:Meeting) : Observable<Meeting>{
     let tempUrl = this.baseUrl + "/" + meet.meetingId;
     return this.http.put<Meeting>(tempUrl, meet); 

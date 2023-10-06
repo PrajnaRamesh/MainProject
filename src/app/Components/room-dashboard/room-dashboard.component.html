@@ -2,7 +2,7 @@
 <a routerLink="/addRoom">Add Room</a>
 <br>
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         
             <table class="table">
@@ -32,5 +32,31 @@
             </table>
         </div>
               
-        </div>
+        </div> -->
    
+        <div class="container mx-auto mt-6" style="padding: 30px;">
+            <div class="row" style="padding: 30px;">
+              <!-- <div class="col-md-4"> -->
+                <div class="card" style="width: 18rem;" *ngFor="let room of RoomList" >
+            <img src="https://th.bing.com/th/id/OIP.6EWR3SvsedFWi-qszJn6RQHaEK?pid=ImgDet&rs=1" class="card-img-top" alt="...">
+            <div class="card-body" >
+
+              <h5 class="card-title">{{room.roomName}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <p class="card-text">This Room can constitute upto {{room.roomCapacity}} People</p>
+                 <a href="#" routerLink="/updateRoom/{{room.roomId}}" ><i class="fa fa-pencil" ></i> </a>&nbsp;
+              <a href="#" routerLink="/ViewRoom/{{room.roomId}}" > <i class="fa fa-eye" ></i></a>&nbsp;
+              <button class="btn btn-danger my-2" (click)="onDelete(room.roomId)">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>&nbsp;
+            </div>
+            </div>
+              </div>    
+            
+                    
+              
+              
+                    
+            </div>
+          <!-- </div> -->
+            

@@ -10,6 +10,11 @@ import { ViewRoomComponent } from './Components/view-room/view-room.component';
 import { AddRoomComponent } from './Components/add-room/add-room.component';
 import { RoomDashboardComponent } from './Components/room-dashboard/room-dashboard.component';
 import { RommnavbarComponent } from './Components/rommnavbar/rommnavbar.component';
+import { AddMeetingComponent } from './Components/add-meeting/add-meeting.component';
+import { AddEmployeeComponent } from './Components/add-employee/add-employee.component';
+import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
+import { ViewEmployeeComponent } from './Components/view-employee/view-employee.component';
+import { EditEmployeeComponent } from './Components/edit-employee/edit-employee.component';
 const routes: Routes = [
   {path:'',redirectTo:'dashboard',pathMatch:'full'},
   {path:'booking',component:BookingComponent},
@@ -22,7 +27,12 @@ const routes: Routes = [
   {path:'ViewRoom/:id',component:ViewRoomComponent},
   {path:'addRoom',component:AddRoomComponent},
   {path:'roomdash',component:RoomDashboardComponent},
-  {path:'roomnav',component:RommnavbarComponent}
+  {path:'roomnav',component:RommnavbarComponent},
+  {path:'addMeet',component:AddMeetingComponent},
+  {path:'addEmployee',component:AddEmployeeComponent},
+  {path:'empDash',component:EmployeeListComponent},
+  {path:'viewEmp/:id',component:ViewEmployeeComponent},
+  {path:'editEmp/:id',component:EditEmployeeComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
